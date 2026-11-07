@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f8f4">
+  <meta name="description" content="Discover standout campus events, find your people, and save your spot. K Explore is a modern event-discovery demo website.">
+  <title>K Explore — Find your next great experience</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#events">Skip to events</a>
+  <div class="announcement"><span class="announcement-dot" aria-hidden="true"></span> DISCOVER MORE. EXPERIENCE MORE. <span class="announcement-star" aria-hidden="true">✳</span> YOUR NEXT STORY STARTS HERE</div>
+
+  <header class="site-header" id="top">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="K Explore, home"><span class="brand-mark" aria-hidden="true">✳</span><span>K<span class="brand-gap"> </span>EXPLORE<span class="brand-period">.</span></span></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#events">Explore events</a>
+        <a href="#categories">Categories</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#faq">FAQs</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle icon-button" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Toggle theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13.2A9 9 0 0 1 10.8 3.1 9 9 0 1 0 20.9 13.2Z"/></svg>
+        </button>
+        <button class="button button-dark passes-button" id="openPasses" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M8 6v12M12 10h6M12 14h3"/></svg> My registrations <span class="pass-count" id="passCount" aria-label="0 saved registrations">0</span></button>
+        <button class="mobile-menu-button icon-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" hidden>
+      <a href="#events">Explore events</a><a href="#categories">Categories</a><a href="#how-it-works">How it works</a><a href="#faq">FAQs</a>
+      <button type="button" id="mobilePasses">My registrations <span aria-hidden="true">↗</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-shell">
+          <div class="hero-orb hero-orb-one" aria-hidden="true"></div><div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+          <div class="hero-copy">
+            <div class="eyebrow hero-eyebrow"><span class="pulse" aria-hidden="true"></span> WHERE GOOD THINGS HAPPEN</div>
+            <h1 id="hero-heading">Less scrolling.<br><span class="hero-highlight">More living<span class="hero-asterisk">✳</span></span></h1>
+            <p>Discover the workshops, festivals, conversations, and unforgettable moments happening around you. Your next favorite memory is one click away.</p>
+            <div class="hero-actions"><a class="button button-lime button-large" href="#events">Explore events <span aria-hidden="true">↗</span></a><a class="hero-text-link" href="#how-it-works">See how it works <span aria-hidden="true">→</span></a></div>
+            <div class="hero-social-proof"><div class="avatar-stack" aria-hidden="true"><span>✦</span><span>✳</span><span>★</span></div><div><strong>Made for curious minds</strong><small>Meet people. Try things. Make memories.</small></div></div>
+          </div>
+          <div class="hero-visual" aria-label="A colorful featured event poster">
+            <div class="hero-tiny-star star-top" aria-hidden="true">✳</div>
+            <div class="hero-poster-wrap"><img src="assets/hero-poster.svg" alt="Colorful illustration celebrating campus events and creativity" class="hero-poster" width="580" height="690"></div>
+            <div class="hero-float hero-float-top"><span class="mini-icon" aria-hidden="true">✦</span><span><strong>NEW EXPERIENCES</strong><small>All in one place</small></span></div>
+            <div class="hero-float hero-float-bottom"><span class="float-status" aria-hidden="true"></span><span><strong>UP NEXT</strong><small id="nextEventTitle">Build &amp; Brew Hackathon</small></span></div>
+            <div class="hero-tiny-star star-bottom" aria-hidden="true">✴</div>
+          </div>
+        </div>
+        <div class="hero-below"><span>EXPLORE WHAT'S POSSIBLE <span aria-hidden="true">↗</span></span><div class="hero-rule" aria-hidden="true"></div><span id="heroEventCount">09 CURATED EXPERIENCES</span></div>
+      </div>
+    </section>
+
+    <section class="categories-section" id="categories" aria-labelledby="categories-heading">
+      <div class="container">
+        <div class="section-kicker"><span class="kicker-dot" aria-hidden="true"></span> FIND YOUR THING</div>
+        <div class="categories-heading-row"><div><h2 id="categories-heading">Something for <em>everyone.</em></h2><p>Whatever you're into, there's a space for you.</p></div><a class="text-arrow-link" href="#events">Browse all events <span aria-hidden="true">↗</span></a></div>
+        <div class="category-tiles" id="categoryTiles" aria-label="Browse event categories"></div>
+      </div>
+    </section>
+
+    <section class="events-section" id="events" aria-labelledby="events-heading">
+      <div class="container">
+        <div class="section-heading-row"><div><div class="section-kicker"><span class="kicker-dot" aria-hidden="true"></span> THE GOOD STUFF</div><h2 id="events-heading">What's <em>happening.</em></h2><p>Find something worth adding to your calendar.</p></div><div class="countdown-card" aria-live="off"><span class="countdown-label">NEXT EVENT STARTS IN</span><div class="countdown-numbers" id="countdown" aria-label="Countdown to next event"><strong>--</strong><span>days</span><strong>--</strong><span>hours</span><strong>--</strong><span>min</span></div></div></div>
+        <div class="filters-panel">
+          <label class="search-field" for="eventSearch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input type="search" id="eventSearch" placeholder="Search events, venues, or interests..." autocomplete="off"><span class="search-shortcut" aria-hidden="true">⌕</span></label>
+          <label class="sort-field" for="sortEvents"><span>Sort:</span><select id="sortEvents"><option value="soonest">Date: Soonest</option><option value="latest">Date: Latest</option><option value="name">Name: A – Z</option></select></label>
+        </div>
+        <div class="filter-row"><div class="filter-chips" id="filterChips" role="group" aria-label="Filter events by category"></div><span class="result-count" id="resultCount" aria-live="polite">Showing 9 events</span></div>
+        <div class="event-grid" id="eventGrid" aria-live="polite"></div>
+        <div class="empty-state" id="emptyState" hidden><div class="empty-illustration" aria-hidden="true">⌁</div><h3>No events found.</h3><p>Try another search or choose a different category.</p><button class="button button-dark" id="resetFilters" type="button">Clear filters <span aria-hidden="true">↗</span></button></div>
+        <div class="demo-notice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5h.01" stroke-linecap="round"/></svg><span><strong>Demo project:</strong> The events shown are fictional examples created for this web-design assignment. Registrations are stored only in your browser.</span></div>
+      </div>
+    </section>
+
+    <section class="how-section" id="how-it-works" aria-labelledby="how-heading"><div class="container"><div class="section-kicker"><span class="kicker-dot" aria-hidden="true"></span> EASY AS 1, 2, 3</div><div class="how-heading-row"><h2 id="how-heading">Your next adventure,<br><em>three steps away.</em></h2><p>Less planning, more experiencing. We made discovering what's next ridiculously simple.</p></div><div class="steps-grid"><article class="step-card"><div class="step-top"><span class="step-number">01 / EXPLORE</span><span class="step-icon step-icon-lavender" aria-hidden="true">⌕</span></div><h3>Find your people.</h3><p>Discover events by interest, browse categories, or search for something specific.</p><div class="step-decoration deco-bubbles" aria-hidden="true"><i></i><i></i><i></i></div></article><article class="step-card"><div class="step-top"><span class="step-number">02 / DISCOVER</span><span class="step-icon step-icon-peach" aria-hidden="true">↗</span></div><h3>Get the details.</h3><p>Explore the schedule, location, and everything you need to know before you go.</p><div class="step-decoration deco-orbit" aria-hidden="true"><i></i><i></i></div></article><article class="step-card"><div class="step-top"><span class="step-number">03 / REGISTER</span><span class="step-icon step-icon-lime" aria-hidden="true">✓</span></div><h3>Save your spot.</h3><p>Fill in a short form and see your saved demo registration instantly.</p><div class="step-decoration deco-ticket" aria-hidden="true"><i>ADMIT ONE</i><span>✳</span></div></article></div></div></section>
+
+    <section class="cta-section"><div class="container"><div class="cta-box"><span class="cta-orbit orbit-one" aria-hidden="true"></span><span class="cta-orbit orbit-two" aria-hidden="true"></span><div class="section-kicker cta-kicker"><span class="kicker-dot" aria-hidden="true"></span> DON'T JUST HEAR ABOUT IT</div><h2>The best stories start<br>with <em>“I was there.”</em></h2><p>Go somewhere new. Learn something unexpected. Find your kind of crowd.</p><a class="button button-lime button-large" href="#events">Find your next event <span aria-hidden="true">↗</span></a><span class="cta-scribble" aria-hidden="true">✳</span></div></div></section>
+
+    <section class="faq-section" id="faq" aria-labelledby="faq-heading"><div class="container faq-layout"><div><div class="section-kicker"><span class="kicker-dot" aria-hidden="true"></span> GOOD TO KNOW</div><h2 id="faq-heading">A few <em>FAQs.</em></h2><p>Everything you need to know about this demo event platform.</p></div><div class="faq-list"><details><summary>Is this a real event-booking website? <span aria-hidden="true">+</span></summary><p>No. K Explore is a student web-development project. Events, venues, and registration examples are fictional, and no real seats are booked.</p></details><details><summary>Where is my registration information saved? <span aria-hidden="true">+</span></summary><p>Form submissions are saved only in this browser's localStorage. They are not sent to a server, emailed, or shared with an event organizer. Avoid entering sensitive information on shared devices.</p></details><details><summary>Can I view or delete my registration? <span aria-hidden="true">+</span></summary><p>Yes. Select “My registrations” in the top menu to view saved demo registrations, export a CSV file, or remove any entry.</p></details><details><summary>Does the site work on mobile devices? <span aria-hidden="true">+</span></summary><p>Yes. The layout and navigation are responsive, designed for desktop, tablet, and mobile screens.</p></details></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-top"><div><a class="brand brand-footer" href="#top"><span class="brand-mark" aria-hidden="true">✳</span><span>K EXPLORE<span class="brand-period">.</span></span></a><p>For the curious, the creative,<br>and the “let's go” kind of people.</p></div><div class="footer-links"><div><strong>DISCOVER</strong><a href="#events">All events</a><a href="#categories">Categories</a><a href="#how-it-works">How it works</a></div><div><strong>HELPFUL</strong><a href="#faq">FAQs</a><button id="footerPasses" type="button">My registrations</button><a href="#top">Back to top ↗</a></div></div></div><div class="footer-bottom"><span>© <span id="footerYear">2026</span> K Explore. Student web-design demo.</span><span>BUILT WITH HTML · CSS · JAVASCRIPT <span aria-hidden="true">✳</span></span></div></div></footer>
+
+  <!-- Event details: native HTML dialog supports Escape, focus, and keyboard users. -->
+  <dialog class="dialog details-dialog" id="detailsDialog" aria-labelledby="detailTitle"><div class="details-layout"><div class="details-media"><img id="detailImage" src="assets/build-brew.svg" alt="" width="1200" height="770"><span class="details-image-label" id="detailImageCategory">TECHNOLOGY</span></div><div class="details-content"><button class="dialog-close icon-button" type="button" data-close-dialog aria-label="Close event details">×</button><div class="section-kicker detail-kicker"><span class="kicker-dot" aria-hidden="true"></span> EVENT DETAILS</div><h2 id="detailTitle">Event title</h2><p class="detail-description" id="detailDescription"></p><div class="detail-meta" id="detailMeta"></div><h3>What's in store</h3><ul class="detail-agenda" id="detailAgenda"></ul><div class="detail-tags" id="detailTags"></div><div class="detail-actions"><button type="button" class="button button-dark button-full" id="detailRegister">Register for this event <span aria-hidden="true">↗</span></button><button type="button" class="share-button" id="shareEvent">Copy event link <span aria-hidden="true">⤴</span></button></div></div></div></dialog>
+
+  <!-- Registration form: all validation is performed client-side in app.js. -->
+  <dialog class="dialog form-dialog" id="registrationDialog" aria-labelledby="registerHeading"><div class="form-dialog-inner"><button class="dialog-close icon-button" type="button" data-close-dialog aria-label="Close registration form">×</button><span class="form-icon" aria-hidden="true">✳</span><div class="section-kicker"><span class="kicker-dot" aria-hidden="true"></span> ALMOST THERE</div><h2 id="registerHeading">Save your <em>spot.</em></h2><p class="form-intro">Your next experience starts here. Complete the details below to save a demo registration on this device.</p><form id="registrationForm" novalidate><div class="form-field"><label for="fullName">Full name <span aria-hidden="true">*</span></label><input type="text" id="fullName" name="fullName" autocomplete="name" placeholder="e.g. Alex Taylor" maxlength="80" aria-describedby="nameError" required><small class="field-error" id="nameError" aria-live="polite"></small></div><div class="form-field"><label for="email">Email address <span aria-hidden="true">*</span></label><input type="email" id="email" name="email" autocomplete="email" placeholder="alex@example.com" maxlength="120" aria-describedby="emailError" required><small class="field-error" id="emailError" aria-live="polite"></small></div><div class="form-field"><label for="phone">Phone number <span aria-hidden="true">*</span></label><input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="e.g. +91 98765 43210" maxlength="24" aria-describedby="phoneError" required><small class="field-error" id="phoneError" aria-live="polite"></small></div><div class="form-field"><label for="selectedEvent">Choose an event <span aria-hidden="true">*</span></label><select id="selectedEvent" name="event" aria-describedby="eventError" required><option value="">Select an event</option></select><small class="field-error" id="eventError" aria-live="polite"></small></div><p class="privacy-note"><span aria-hidden="true">ⓘ</span> This is a demo. Your information stays in your browser and is not sent to anyone.</p><button type="submit" class="button button-dark button-full submit-button">Confirm my registration <span aria-hidden="true">↗</span></button></form></div></dialog>
+
+  <dialog class="dialog success-dialog" id="successDialog" aria-labelledby="successHeading"><div class="success-inner"><button class="dialog-close icon-button" type="button" data-close-dialog aria-label="Close confirmation">×</button><div class="success-symbol" aria-hidden="true">✓</div><div class="section-kicker"><span class="kicker-dot" aria-hidden="true"></span> YOU'RE ALL SET</div><h2 id="successHeading">You're on the <em>list!</em></h2><p id="successMessage">Your registration has been saved in this browser.</p><div class="ticket-preview"><span>YOUR DEMO REFERENCE</span><strong id="successRef">KE-000000</strong><small id="successEvent">Event name</small></div><p class="success-disclaimer">This is a local demo confirmation, not an actual event ticket or reservation.</p><button class="button button-dark button-full" id="successViewPasses" type="button">View my registrations <span aria-hidden="true">↗</span></button></div></dialog>
+
+  <dialog class="dialog passes-dialog" id="passesDialog" aria-labelledby="passesHeading"><div class="passes-inner"><button class="dialog-close icon-button" type="button" data-close-dialog aria-label="Close registrations">×</button><div class="section-kicker"><span class="kicker-dot" aria-hidden="true"></span> YOUR SAVED EXPERIENCES</div><h2 id="passesHeading">My <em>registrations.</em></h2><p class="passes-intro">Your demo registrations on this device. You can remove them any time.</p><div class="passes-list" id="passesList"></div><button class="export-button" id="exportCsv" type="button" hidden>↓ Export registrations as CSV</button></div></dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

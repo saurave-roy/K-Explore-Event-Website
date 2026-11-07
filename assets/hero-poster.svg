@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="690" viewBox="0 0 580 690" role="img" aria-label="K Explore colorful illustration">
+<defs><linearGradient id="h" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#3a2180"/><stop offset=".54" stop-color="#6f51dc"/><stop offset="1" stop-color="#ef83ba"/></linearGradient><radialGradient id="r"><stop stop-color="#ffdb81"/><stop offset="1" stop-color="#ffdb81" stop-opacity="0"/></radialGradient><pattern id="p" width="17" height="17" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#fff" opacity=".24"/></pattern></defs>
+<rect width="580" height="690" rx="5" fill="url(#h)"/><rect width="580" height="690" fill="url(#p)"/>
+<path d="M-100 250Q200 -90 600 10" fill="none" stroke="#d9c0fe" stroke-width="2" opacity=".6"/><path d="M-100 292Q200 -50 600 53" fill="none" stroke="#d9c0fe" stroke-width="2" opacity=".6"/>
+<circle cx="342" cy="272" r="214" fill="#e2ff87"/><circle cx="342" cy="272" r="157" fill="#b6e8ef"/><circle cx="342" cy="272" r="98" fill="#f691c1"/>
+<circle cx="308" cy="251" r="13" fill="#2b2058"/><circle cx="383" cy="251" r="13" fill="#2b2058"/><path d="M289 306q54 61 109-2" fill="none" stroke="#2b2058" stroke-width="17" stroke-linecap="round"/>
+<path d="M105 110l19 36 39 5-27 27 5 39-36-19-36 19 6-39-28-27 39-5Z" fill="#fff4bb" transform="rotate(-23 105 162)"/><path d="M470 360l10 17 19 3-14 14 3 20-18-9-18 9 3-20-14-14 19-3Z" fill="#f1d5ff"/>
+<rect x="45" y="31" width="192" height="38" rx="19" fill="#ffffff29" stroke="#ffffff82"/><text x="65" y="56" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="800" letter-spacing="2">✳  K EXPLORE</text>
+<g font-family="Arial,Helvetica,sans-serif" font-weight="900" letter-spacing="-8"><text x="39" y="468" fill="#fff" font-size="125">GET</text><text x="39" y="571" fill="#dfff80" font-size="118">OUT</text><text x="39" y="661" fill="#fff" font-size="105">THERE.</text></g>
+<path d="M477 488l-22 42 38 28 22-47-38-23Z" fill="#ffe07f"/><text x="478" y="521" fill="#50357a" font-size="34" font-family="Arial" font-weight="900">✳</text>
+</svg>

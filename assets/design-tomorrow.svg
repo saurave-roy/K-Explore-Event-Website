@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="770" viewBox="0 0 1200 770" role="img" aria-label="Event artwork: DESIGN TOMORROW">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f26d52"/><stop offset="1" stop-color="#efab74"/></linearGradient><radialGradient id="glow"><stop stop-color="#ffd5b9" stop-opacity=".48"/><stop offset="1" stop-color="#ffd5b9" stop-opacity="0"/></radialGradient><pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.6" fill="#fff" opacity=".19"/></pattern></defs>
+<rect width="1200" height="770" fill="url(#bg)"/><rect width="1200" height="770" fill="url(#dots)"/>
+<circle cx="957" cy="350" r="360" fill="url(#glow)"/><circle cx="1160" cy="740" r="180" fill="none" stroke="#ffd5b9" stroke-width="2" opacity=".5"/><circle cx="1160" cy="740" r="250" fill="none" stroke="#ffd5b9" stroke-width="2" opacity=".3"/>
+<g font-family="Arial,Helvetica,sans-serif" fill="#fff"><text x="72" y="109" font-size="27" font-weight="800" letter-spacing="5">✳  K EXPLORE / EXPERIENCES</text><path d="M72 135H520" stroke="#ffffff70" stroke-width="2"/><text x="72" y="320" font-size="100" font-weight="900" letter-spacing="-4">DESIGN</text><text x="72" y="424" font-size="108" font-weight="900" letter-spacing="-4" fill="#442270">TOMORROW</text></g>
+<g transform="translate(850 360) rotate(15)"><rect x="-190" y="-165" width="335" height="300" rx="30" fill="#ffddaa"/><rect x="-143" y="-128" width="335" height="300" rx="30" fill="#6642aa"/><circle cx="35" cy="30" r="100" fill="#442270"/><path d="M-80 60 78-105 M-5 140 146-23" stroke="#ffbdaf" stroke-width="21" stroke-linecap="round"/></g><circle cx="1100" cy="155" r="65" fill="#ffd6b3"/>
+<rect x="70" y="644" width="435" height="63" rx="31.5" fill="#ffffff25" stroke="#ffffff60" stroke-width="2"/>
+<text x="96" y="684" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="24" letter-spacing="2" fill="#fff">CREATIVE LAB  /  29 NOV</text>
+<text x="1090" y="690" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="80" fill="#442270" opacity=".9">✳</text>
+</svg>
